@@ -17,7 +17,7 @@ public class Test1 {
 
 		System.out.println("truyen thieu tham so");
 		URL url = new URL(Constant.SIGN_UP + "?phonenumber=0987768886"
-				+ "&password=123456789" + "&uuid=1w2e3r4t");
+				+ "&password=123456789");
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 		connection.setRequestMethod("POST");

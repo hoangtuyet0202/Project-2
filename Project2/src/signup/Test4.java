@@ -16,9 +16,8 @@ public class Test4 {
 	public static void main(String[] args) throws MalformedURLException, ProtocolException, IOException {
 
 		System.out.println("so dien thoai sai");
-		URL url = new URL(Constant.SIGN_UP + "?username=tuyetht" + "&fullname=hoangthituyet"
-				+ "&email=hoangtuyetkn@gmail.com" + "&role=guest" + "&phonenumber=099987768886"
-				+ "&password=123456789" + "&uuid=1w2e3r4t");
+		URL url = new URL(Constant.SIGN_UP + "?username=tuyetht" + "&fullname=hoang thi tuyet"
+				+ "&email=hoangtuyetkn@gmail.com" + "&password=123456" + "&mobile=1987768886" + "&role=guest");
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 		connection.setRequestMethod("POST");

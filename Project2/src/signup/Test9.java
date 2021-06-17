@@ -16,9 +16,8 @@ public class Test9 {
 	public static void main(String[] args) throws MalformedURLException, ProtocolException, IOException {
 
 		System.out.println("email khong chua @");
-		URL url = new URL(Constant.SIGN_UP + "?username=tuyetht" + "&fullname=hoangthituyet"
-				+ "&email=hoangtuyetkn" + "&role=guest" + "&phonenumber=1987768886"
-				+ "&password=123456789" + "&uuid=1w2e3r4t");
+		URL url = new URL(Constant.SIGN_UP + "?username=tuyetht" + "&fullname=hoang thi tuyet"
+				+ "&email=hoangtuyetkngmail.com" + "&password=123456789" + "&mobile=1987768886" + "&role=guest");
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 		connection.setRequestMethod("POST");
@@ -40,7 +39,7 @@ public class Test9 {
 			Gson g = new Gson();
 			ResponseSignUp rp = g.fromJson(content.toString(), ResponseSignUp.class);
 
-			System.out.println("Unit test 6: The code and message strings shall be not NULL as well as non-empty:");
+			System.out.println("Unit test 9: The code and message strings shall be not NULL as well as non-empty:");
 			assert (rp.code != null && !"".equals(rp.code));
 			assert (rp.message != null && !"".equals(rp.message));
 			System.out.println("Finished! Satisfied!");
